@@ -17,7 +17,7 @@ body {
 
 main {
     position: relative;
-    width: 100rem;
+    width: 65rem;
     height: 40rem;
     background-color: rgba(240, 248, 255, 0.295);
     border-radius: 12px;
@@ -27,7 +27,7 @@ main {
 }
 
 .player {
-    flex: 50%;
+    flex: 100%;
     padding: 9rem;
     display: flex;
     flex-direction: column;
@@ -35,6 +35,17 @@ main {
     transition: all 0.75s;
 
 }
+
+.player-1 {
+    flex: 50%;
+    margin-top: -5rem
+}
+
+.player-0 {
+    flex: 50%;
+    margin-top: -5rem
+}
+
 
 .name {
     position: relative;
@@ -49,16 +60,28 @@ main {
 .score {
     font-size: 7rem;
     font-weight: 800;
-    margin-bottom: auto;
+    margin-top: 3rem;
 }
 
 .current {
-    background-color: #451cb6;
-    border-radius: 12px;
+    background-color: #b61c5c;
+    opacity: 0.7;
+    color: white;
     display: flex;
-    text-align: center;
+    justify-content: center;
     padding: 1rem;
+
     word-spacing: 3px;
+}
+
+.current-label {
+    top: 0.2rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.current-score {
+    margin-bottom: 1rem;
 }
 
 .dice {
