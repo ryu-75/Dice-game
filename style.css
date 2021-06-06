@@ -1,2 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap');
 
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Signika Negative', sans-serif;
+    font-weight: 600;
+    height: 100vh;
+    color: rgba(0, 0, 0, 0.774);
+    background-image: linear-gradient(to bottom left, #b61c5c 0%, #451cb6 100%); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    position: relative;
+    width: 100rem;
+    background-color: rgba(240, 248, 255, 0.295);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3rem 8rem rgba(0, 0, 0, 0.623);
+    display: flex;
+}
+
+.player {
+    display: flex;
+    text-align: center;
+    
+}
