@@ -38,34 +38,49 @@ const init = function () {
 };
 init();
 
-
+//Switch player function
+const switchPlayer = function () {
+    document.getElementById(`current-${activePlayer}`).textContent = 0;
+    currentScore = 0;
+    activePlayer = activePlayer === 0 ? 1 : 0;
+    player0El.classList.toggle('player-active');
+    player1El.classList.toggle('player-active')
+};
 
 //Rolling dice functionnality
 btnRoll.addEventListener('click', function () {
+    if (playing) {
     // 1. Generating a random dice roll
     const dice = Math.trunc(Math.random() * 6) + 1;
-    console.log(dice);
 
     // 2. Display dice
     diceEl.classList.remove('hidden')
     diceEl.src = `./dice-element/dice-${dice}.png`
+
     // 3.Check for rolled 1: if true, switch to next player
-    if(dice !== 1) {
+    if (dice !== 1) {
         // Add dice to current score
         currentScore += dice;
-        document.getElementById(`current-${activePlayer}`).textContent = currentScore;
+        document.
+        getElementById(`current-${activePlayer}`).
+        textContent = currentScore;
     } else {
-        activePlayer = activePlayer === 0 ? 1 : 0;
+        //Switch to next player
+        switchPlayer()
+        }
     }
+    
 });
 
 //hold value to current score
 btnHold.addEventListener('click', function () {
     if (playing) {
+        // 1.Add current score to active player's score
         scores[activePlayer] += currentScore;
 
         document.getElementById(`score-${activePlayer}`).textContent = scores[activePlayer];
 
+        // 2. Check if player's score is >= 100
         if (scores[activePlayer] >= 100) {
             playing = false;
             diceEl.classList.add('hidden')
@@ -76,10 +91,10 @@ btnHold.addEventListener('click', function () {
             document.
             querySelector(`.player-${activePlayer}`)
             .classList.remove('player-active')
-            
+        } else {
+            //switch to the next player
+            switchPlayer();
         }
-    } else {
-        activePlayer = activePlayer === 0 ? 1 : 0
     }
 });
 
