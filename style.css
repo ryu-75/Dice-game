@@ -72,5 +72,29 @@ main {
 
 .btn {
     position: absolute;
+    left: 50%;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: inherit;
+    border: none;
+    transform: translateX(-50%);
 
+
+    padding: 0.7rem 2.5rem;
+    border-radius: 5px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 } 
+
+.btn--new {
+    top: 2rem;
+}
+
+.btn--hold {
+    top: 29.8rem;
+}
+
+.btn--roll {
+    top: 26.2rem
+}
+
