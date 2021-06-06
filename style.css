@@ -124,3 +124,6 @@ main {
     top: 26.2rem
 }
 
+.hidden {
+    display: none
+}
