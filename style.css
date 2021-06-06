@@ -60,24 +60,26 @@ main {
 .score {
     font-size: 7rem;
     font-weight: 800;
-    margin-top: 3rem;
+    margin-top: 1.5rem;
+    color: #b61c5c
 }
 
 .current {
     background-color: #b61c5c;
     opacity: 0.7;
     color: white;
-    display: flex;
-    justify-content: center;
+    text-align: center;
     padding: 1rem;
-
+    width: 75%;
     word-spacing: 3px;
+    transition: all 0.75s;
 }
 
 .current-label {
     top: 0.2rem;
     text-transform: uppercase;
     margin-bottom: 2rem;
+
 }
 
 .current-score {
@@ -91,6 +93,7 @@ main {
     top: 15rem;
     height: 10rem;
     box-shadow: 0 2rem 5rem (rgba(0, 0, 0, 0.3));
+    font-weight: 10rem;
 }
 
 .btn {
@@ -102,10 +105,11 @@ main {
     font-family: inherit;
     border: none;
     transform: translateX(-50%);
+    font-size: 1.2rem;
 
 
     padding: 0.7rem 2.5rem;
-    border-radius: 5px;
+    border-radius: 50rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 } 
 
