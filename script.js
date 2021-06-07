@@ -10,7 +10,7 @@ const current1El = document.getElementById('current-1')
 
 
 //button elements 
-const diceEl = document.querySelector('.dice')
+const diceEl = document.querySelector('.dice');
 const btnNew = document.querySelector('.btn--new');
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
