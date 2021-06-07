@@ -118,6 +118,7 @@ main {
 }
 
 
+
 .p--btn {
     position: absolute;
     color: black;
@@ -139,14 +140,21 @@ main {
     font-family: inherit;
     transform: translateX(-50%);
     font-size: 1.2rem;
-    background-color: rgba(255, 255, 255, 0.678);
+    background-color: rgba(255, 255, 255, 0.5);
     padding: 0.6rem;
     border: none;
+    transition: 0.4s;
 
     border-radius: 50%;
     font-size: 2rem;
     box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.623);
 } 
+
+.btn:hover {
+    font-size: 2.3rem;
+    transition: 0.8s;    
+    background-color: rgba(255, 255, 255);
+}
 
 .player-active {
     background-color: rgba(250, 235, 215, 0.603);
