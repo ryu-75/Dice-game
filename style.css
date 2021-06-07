@@ -99,30 +99,9 @@ main {
     box-shadow: 0 2rem 5rem (rgba(0, 0, 0, 0.3));
 }
 
-.font--new {
-    top: 1.2rem;
-    left: 50%;
-    color: #b61c5c;
-}
-
-.font--roll {
-    top: 31.7rem;
-    left: 50%;
-    color: #b61c5c;
-}
-
-.font--hold {
-    top: 25.1rem;
-    left: 50%;
-    color: #b61c5c;
-}
-
-
-
 .p--btn {
     position: absolute;
     color: black;
-    cursor: pointer;
     text-transform: uppercase;
     font-weight: 600;
     font-family: inherit;
@@ -131,7 +110,26 @@ main {
     padding: 0.6rem;
 } 
 
+.p--new {
+    top: -8px;
+    left: 50.5%;
+    word-spacing: 15px;
+    font-size: 25px;
+    font-weight: bold;
+}
 
+.p--hold {
+    top: 20.8rem;
+    left: 50%;
+    font-size: 25px;
+}
+
+.p--roll {
+    top: 27.8rem;
+    left: 50%;
+    border-radius: 50rem;
+    font-size: 25px;
+}
 
 .btn {
     position: absolute;
@@ -147,34 +145,36 @@ main {
 
     border-radius: 50%;
     font-size: 2rem;
-    box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.623);
 } 
 
+.btn--new {
+    top: 3.8rem;
+    left: 50%;
+    color: #b61c5c;
+}
+
+.btn--roll {
+    top: 32rem;
+    left: 50%;
+    color: #b61c5c;
+}
+
+.btn--hold {
+    top: 25.1rem;
+    left: 50%;
+    color: #b61c5c;
+}
+
 .btn:hover {
+    cursor: pointer;
     font-size: 2.3rem;
     transition: 0.8s;    
     background-color: rgba(255, 255, 255);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.623);
 }
 
 .player-active {
     background-color: rgba(250, 235, 215, 0.603);
-}
-
-.btn--new {
-    top: 0.5rem;
-    left: 50.2%;
-    word-spacing: 65px;
-}
-
-.btn--hold {
-    top: 27.8rem;
-    left: 50%;
-}
-
-.btn--roll {
-    top: 24.2rem;
-    left: 49.6%;
-    word-spacing: 62px;
 }
 
 .hidden {
