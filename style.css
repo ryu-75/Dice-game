@@ -99,40 +99,53 @@ main {
     box-shadow: 0 2rem 5rem (rgba(0, 0, 0, 0.3));
 }
 
-.font {
-    position: absolute;
-    
-    background-color: white;
-    border: 2px solid white;
-    border-radius: 100%;
-    padding: 4px;
-
-}
-
 .font--new {
     top: 1.2rem;
-    left: 48%;
-    font-size: 2.2rem;
+    left: 50%;
     color: #b61c5c;
 }
+
+.font--roll {
+    top: 31.7rem;
+    left: 50%;
+    color: #b61c5c;
+}
+
+.font--hold {
+    top: 25.1rem;
+    left: 50%;
+    color: #b61c5c;
+}
+
+
+.p--btn {
+    position: absolute;
+    color: black;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: inherit;
+    transform: translateX(-50%);
+    font-size: 1.2rem;
+    padding: 0.6rem;
+} 
 
 
 
 .btn {
     position: absolute;
-    cursor: pointer;
     text-transform: uppercase;
     font-weight: 600;
     font-family: inherit;
-    border: none;
     transform: translateX(-50%);
     font-size: 1.2rem;
-    background: none;
+    background-color: rgba(255, 255, 255, 0.678);
+    padding: 0.6rem;
+    border: none;
 
-
-    padding: 0.7rem 2.5rem;
-    border-radius: 50rem;
-
+    border-radius: 50%;
+    font-size: 2rem;
+    box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.623);
 } 
 
 .player-active {
@@ -140,20 +153,20 @@ main {
 }
 
 .btn--new {
-    top: 1.4rem;
+    top: 0.5rem;
     left: 50.2%;
     word-spacing: 65px;
 }
 
 .btn--hold {
-    top: 29.8rem;
-    left: 48.7%;
+    top: 27.8rem;
+    left: 50%;
 }
 
 .btn--roll {
-    top: 26.2rem;
-    left: 48.1%;
-    word-spacing: 8px;
+    top: 24.2rem;
+    left: 49.6%;
+    word-spacing: 62px;
 }
 
 .hidden {
