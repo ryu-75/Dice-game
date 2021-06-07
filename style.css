@@ -13,6 +13,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    display: grid;
+    grid-template-columns: 50vw, 50vw;
+    grid-template-rows: 1fr, 1fr;
+    grid-area: 
+    'section section';
 }
 
 main {
@@ -38,12 +43,14 @@ main {
 
 .player-1 {
     flex: 50%;
-    margin-top: -5rem
+    margin-top: -5rem;
+    grid-column: section;
 }
 
 .player-0 {
     flex: 50%;
-    margin-top: -5rem
+    margin-top: -5rem;
+    grid-column: section
 }
 
 
@@ -132,3 +139,4 @@ main {
 .hidden {
     display: none
 }
+
