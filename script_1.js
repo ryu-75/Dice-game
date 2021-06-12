@@ -4,8 +4,34 @@ $(document).ready(function() {
     let activePlayer = 0;
     let playing = true;
 
-    $('.dice').hide()
+    $('.dice').hide();
     
+    const init = (() => {
+        scores = [0, 0];
+        currentScore = 0;
+        activePlayer = 0;
+        playing = true;
+
+        $('#score-0').text('0')
+        $('#score-1').text('0')
+        $('#current-0').text('0')
+        $('#current-1').text('0')
+
+        $('.dice').hide()
+        $('.player-0').remove('player-winner')
+        $('.player-1').remove('player-winner')
+        $('.player-0').add('player-active')
+        $('.player-1').remove('player-active')
+    });
+    init();
+
+    const switchPlayer = () => {
+        activePlayer = activePlayer === 0 ? 1 : 0;
+        $('.current', activePlayer);
+        textContent = currentScore;
+
+    }
+
     //Rolling dice functionnality
     $('.btn--roll').click(() => {
         if (playing) {
@@ -22,9 +48,7 @@ $(document).ready(function() {
                 $('.current', activePlayer) 
                 textContent = currentScore; 
             } else {
-                activePlayer = activePlayer === 0 ? 1 : 0;
-                $('.current', activePlayer)
-                textContent = currentScore;
+                switchPlayer()
             }
         }
     });
@@ -41,32 +65,13 @@ $(document).ready(function() {
                 playing = false;
                 $('.dice').hide()
 
-                $(`.player-${activePlayer}`).attr('winner-player')
+                $(`.player-${activePlayer}`).add('winner-player')
                 $(`.player-${activePlayer}`).remove('player-active')
             } else {
-                activePlayer = activePlayer === 0 ? 1 : 0;
-                $('.current', activePlayer)
-                textContent = currentScore;
+                switchPlayer()
             }
         }
     });
 
-    $('.btn--new').click(() => {
-        scores = [0, 0];
-        currentScore = 0;
-        activePlayer = 0;
-        playing = true;
-
-        $('#score-0').text('0')
-        $('#score-1').text('0')
-        $('#current-0').text('0')
-        $('#current-1').text('0')
-
-        $('.dice').hide()
-        $('.player-0').remove('player-winner')
-        $('.player-1').remove('player-winner')
-        $('.player-0').add('player-active')
-        $('.player-1').remove('player-active')
-    })
-
+    $('.btn--new').click(init)
 })
