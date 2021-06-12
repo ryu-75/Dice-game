@@ -5,8 +5,8 @@ const player0El = document.querySelector('.player-0');
 const player1El = document.querySelector('.player-1');
 const score0El = document.querySelector('#score-0');
 const score1El = document.getElementById('score-1');
-const current0El = document.getElementById('current-0');
-const current1El = document.getElementById('current-1')
+const current0El = document.getElementById('#current-0');
+const current1El = document.getElementById('#current-1')
 
 
 //button elements 
@@ -16,7 +16,7 @@ const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
 
 
-let score, activePlayer, currentScore, scores;
+let activePlayer, currentScore, scores;
 
 //Starting conditions
 const init = function () {
