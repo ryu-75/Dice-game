@@ -27,11 +27,23 @@ $(document).ready(function() {
         current0El.text('0')
         current1El.text('0')
 
-        diceEl.hide()
-        player0El.remove('player-winner')
+        diceEl.add('hidden')
+
+        btnNew.click(() => {
+            if ($(`.player-${activePlayer}`) !== 0) {
+                player0El.add('player-active')
+                player1El.remove('player-active')
+            } 
+                
+            
+        })
+
+        
+
+        player0El.remove('player-winner');
         player1El.remove('player-winner')
-        player0El.add('player-active')
-        player1El.remove('player-active')
+        
+
     });
     init();
 
@@ -40,9 +52,9 @@ $(document).ready(function() {
         $(`#current-${activePlayer}`).text('0');
         currentScore = 0;
         activePlayer = activePlayer === 0 ? 1 : 0;
-        player0El.replace('player-active');
-        player1El.replace('player-active');
-    }
+        player0El.toggleClass('player-active')
+        player1El.toggleClass('player-active')
+    };
 
     //Rolling dice functionnality
     btnRoll.click(() => {
@@ -67,12 +79,11 @@ $(document).ready(function() {
     btnHold.click(() => {
         if (playing) {
             scores[activePlayer] += currentScore ;
-
             $(`#score-${activePlayer}`).html(scores[activePlayer]);
 
             if (scores[activePlayer] >= 100) {
                 playing = false;
-                $('.dice').hide()
+                $('.dice').add('hidden')
 
                 $(`.player-${activePlayer}`).add('winner-player');
                 $(`.player-${activePlayer}`).remove('player-active')
