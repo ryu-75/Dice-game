@@ -29,21 +29,14 @@ $(document).ready(function() {
 
         diceEl.add('hidden')
 
-        btnNew.click(() => {
-            if ($(`.player-${activePlayer}`) !== 0) {
-                player0El.add('player-active')
-                player1El.remove('player-active')
-            } 
-                
-            
-        })
+
+        diceEl.add('hidden');
+        player0El.toggleClass('player-active');
+        player0El.removeClass('player-winner');
+        player1El.removeClass('player-winner');
+        player1El.removeClass('player-active')
 
         
-
-        player0El.remove('player-winner');
-        player1El.remove('player-winner')
-        
-
     });
     init();
 
