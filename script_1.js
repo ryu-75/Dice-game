@@ -27,11 +27,8 @@ $(document).ready(function() {
         current0El.text('0')
         current1El.text('0')
 
-        diceEl.add('hidden')
-
-
-        diceEl.add('hidden');
-        player0El.toggleClass('player-active');
+        diceEl.hide();
+        player0El.addClass('player-active');
         player0El.removeClass('player-winner');
         player1El.removeClass('player-winner');
         player1El.removeClass('player-active')
@@ -76,10 +73,10 @@ $(document).ready(function() {
 
             if (scores[activePlayer] >= 100) {
                 playing = false;
-                $('.dice').add('hidden')
+                $('.dice').hide()
 
-                $(`.player-${activePlayer}`).add('winner-player');
-                $(`.player-${activePlayer}`).remove('player-active')
+                $(`.player-${activePlayer}`).addClass('winner-player');
+                $(`.player-${activePlayer}`).removeClass('player-active')
             } else {
                 switchPlayer()
             }
