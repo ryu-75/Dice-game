@@ -12,7 +12,6 @@ $(document).ready(function() {
     let btnRoll = $('.btn--roll');
     let btnHold = $('.btn--hold');
     
-
     let scores, activePlayer, currentScore; 
     
     //Starting condition
@@ -32,8 +31,6 @@ $(document).ready(function() {
         player0El.removeClass('player-winner');
         player1El.removeClass('player-winner');
         player1El.removeClass('player-active')
-
-        
     });
     init();
 
