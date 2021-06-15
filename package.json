@@ -10,6 +10,9 @@
     "type": "git",
     "url": "git+https://github.com/ryu-75/Dice-game.git"
   },
+  "engines": {
+    "node": "14.17.0"
+  },
   "author": "",
   "license": "ISC",
   "bugs": {
