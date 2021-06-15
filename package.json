@@ -3,11 +3,11 @@
   "version": "0.3.0",
   "description": "A sample Node.js app using Express 4",
   "engines": {
-    "node": "14.x"
+    "node": "14.17.0"
   },
-  "main": "index.js",
+  "main": "JQuery.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node JQuery.js",
     "test": "node test.js"
   },
   "dependencies": {
