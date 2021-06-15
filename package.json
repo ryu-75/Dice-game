@@ -5,7 +5,7 @@
   "engines": {
     "node": "14.17.0"
   },
-  "main": "script.js",
+  "main": "JQuery.js",
   "scripts": {
     "start": "node JQuery.js",
     "test": "node test.js"
