@@ -1,1 +1,1 @@
-web: node JQuery.js
+web: node index.js
