@@ -176,7 +176,3 @@ main {
     background-color: rgba(255, 255, 255, 0.651);
     transition: all 0.90s;
 }
-
-.hidden {
-    display: none
-}
